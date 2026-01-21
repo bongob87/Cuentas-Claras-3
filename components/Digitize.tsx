@@ -61,7 +61,7 @@ export const Digitize: React.FC<DigitizeProps> = ({ customers, onImport }) => {
     setError(null);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
       let parts: any[] = [];
       const promptText = `
         Analiza este archivo que contiene información de cuentas por cobrar (fiado/créditos).
